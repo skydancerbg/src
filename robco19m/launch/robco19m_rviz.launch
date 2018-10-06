@@ -1,0 +1,22 @@
+<launch>
+
+	<param name="robot_type" value="robco19m"/>
+
+	<!--<param name="robot_description" textfile="$(find robco19m)/robot_description/robco19m.urdf" />--> <!--Use for plain URDF robot description fle-->
+	<param name="robot_description" command="$(find xacro)/xacro --inorder '$(find robco19m)/robot_description/robco19m.urdf.xacro'" /> <!--Use for xacro robot description fle-->
+
+	<!-- source that publishes the joint positions as a sensor_msgs/JointState -->
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+	<param name="use_gui" value="true"/>
+	</node>
+	<!-- publish all the frames to TF -->
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" >
+		<param name="publish_frequency" value="50"/> <!-- Hz -->
+  	</node>	
+	
+	<!-- robot visualization -->
+	<!--<node name="rviz" pkg="rviz" type="rviz" required="true" />-->
+	<node name="rviz" pkg="rviz" type="rviz" required="true" args="-d $(find robko19m_cpr_rviz)/launch/config.rviz" /> <!--Use if you already saved a rviz config file-->
+
+
+</launch>

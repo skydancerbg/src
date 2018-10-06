@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: cpr_rviz_plugin
+    relative_path: CPRMover4.urdf.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/CPRMover4.srdf
+  CONFIG:
+    author_name: stefan
+    author_email: stefan@srg.bg
+    generated_timestamp: 1537849816

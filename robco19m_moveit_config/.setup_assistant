@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robco19m
+    relative_path: robot_description/robco19m.urdf.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/robco19m.srdf
+  CONFIG:
+    author_name: Stefan Chivarov
+    author_email: sshivarov@yahoo.com
+    generated_timestamp: 1536765856

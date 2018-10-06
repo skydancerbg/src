@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="robco19m">
+
+<xacro:include filename="$(find robco19m)/robot_description/urdf/properties.xacro" />
+<xacro:include filename="$(find robco19m)/robot_description/urdf/materials.xacro" />
+<xacro:include filename="$(find robco19m)/robot_description/urdf/macros.xacro" />
+<xacro:include filename="$(find robco19m)/robot_description/robco19m_base.urdf.xacro"/>
+<xacro:include filename="$(find robco19m)/robot_description/CPRMover4.urdf.xacro"/>
+
+<xacro:r19m_base />
+<xacro:CPRMover4 />
+
+</robot>
+
